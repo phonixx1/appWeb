@@ -20,15 +20,18 @@ data['negativeCumReturn'] = pd.DataFrame(negativeCumReturn)
 data['sumCumReturns'] = pd.DataFrame(sumCumReturns)
 data['taglist'] = pd.DataFrame(taglist)
 
+
+
 app = dash.Dash(__name__)
+app.title = "Returns analysis"
 
 app.layout = html.Div(
     children=[
-        html.H1(children="Draw-up/Draw-down Analytics", style={"fontSize": "48px", "color": "red",'text-align':'center'},),
+        html.H1(children="Draw-up/Draw-down Analytics", style={"fontSize": "48px", "color": "blue",'text-align':'center'},),
         html.P(
             children="Analyze of the draw-up and draw-down of cumulative returns"
-            " of a time series "
-            ,
+            " of a time series ",
+            style={'text-align':'center'},
         ),
         dcc.Graph(
             figure={
@@ -90,4 +93,5 @@ app.layout = html.Div(
 
 if __name__ == "__main__":
     app.run_server(debug=True)
+   
 
