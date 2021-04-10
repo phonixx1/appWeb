@@ -1,2 +1,3 @@
-.amundiEnv/
+.envAmundi/
 *.csv
+__pycache__/
