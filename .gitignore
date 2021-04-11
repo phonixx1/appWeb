@@ -1,3 +1,4 @@
 .envAmundi/
-*.csv
+SPX.csv
 __pycache__/
+*.pyc

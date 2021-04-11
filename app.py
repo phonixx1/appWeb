@@ -1,6 +1,7 @@
 import base64
 import io
 
+from amundiScript import nan, pd, genDrawUpDrawDown
 import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
@@ -8,8 +9,6 @@ import dash_html_components as html
 import plotly.express as px
 import plotly.graph_objects as go
 
-
-from amundiScript import nan, pd, genDrawUpDrawDown
 
 
 def données(data):
@@ -42,6 +41,7 @@ external_stylesheets = [
     },
 ]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 app.title = "Returns analysis"
 
 app.layout = html.Div([
